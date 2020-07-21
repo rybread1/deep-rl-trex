@@ -2,62 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4f02c7d-8070-4ef9-ad3b-5b39e6a3794e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/model_building/model_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/.idea/PycharmProjects.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/Comercia_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/FRB_run_2-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/FRB_run_2-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/Safe2OpenOnlinePhone-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/Safe2OpenOnlinePhone-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/citibank_ds-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/citibank_ds-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/first_wave_activation_acitivity_report-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/mountain_america_fcu_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/mt_2020_model_gov-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/phone_change_analysis-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/phone_change_analysis-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/.ipynb_checkpoints/working-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/Comercia_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/FRB_run_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/FRB_run_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/citibank_ds.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/citibank_ds.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/data_manipulation/data_study_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/data_studies/evaluation/data_study_evaluator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/data_manipulation/data_study_fis_formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/data_studies/processing/data_study_fis_formatter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/data_manipulation/data_study_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/data_studies/processing/data_study_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/data_manipulation/idi_preprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/data_manipulation/idi_preprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/first_wave_activation_acitivity_report.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/aw_update_may2020-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/bank_ozarks_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/columbia_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/eastman_cu_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/fraud_network_analysis-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/.ipynb_checkpoints/international_bank_of_commerce_ds-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/aw_update_may2020.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/bank_ozarks_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/columbia_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/devl_testing/.ipynb_checkpoints/name_splitter_test-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/devl_testing/name_splitter_test.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/eastman_cu_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/fraud_network_analysis.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/international_bank_of_commerce_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/other files/KS_Score_for_model_gov.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/jupyter notebooks/other files/KS_Score_for_model_gov.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/model_recreation/phone_models/phone_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/model_recreation/phone_models/phone_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/mountain_america_fcu_ds.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/mt_2020_model_gov.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/phone_change_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/phone_change_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/querying/query_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PycharmProjects/IDI/querying/query_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/IDI/working.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/action_space.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/logger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model1/param notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model2/param notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model3/param notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model3_prebatchlearning/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model3_prebatchlearning/cp.ckpt.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model3_prebatchlearning/cp.ckpt.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/model3_prebatchlearning/param notes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PycharmProjects/reinforcement_learning/trex_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/action_space.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="165">
               <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -82,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="240">
               <caret line="19" column="38" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="38" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -94,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+            <state relative-caret-position="1155">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -106,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="151" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="1820">
+              <caret line="187" selection-start-line="187" selection-end-line="187" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -118,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1635">
+            <state relative-caret-position="1560">
               <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -139,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="360">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -181,7 +128,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="50cad659-4e51-456a-afb1-ca28f93db2a2" />
@@ -213,8 +160,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="705" />
-    <option name="width" value="975" />
+    <option name="x" value="2137" />
+    <option name="y" value="6" />
+    <option name="width" value="1111" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -223,19 +171,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="DeepRlTrex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepRlTrex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DeepRlTrex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepRlTrex" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="DeepRlTrex" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
@@ -244,11 +182,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -361,12 +300,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="705" y="0" width="975" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="2137" y="6" width="1111" height="1050" extended-state="0" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.3226152" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.32179606" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32970297" />
       <window_info anchor="bottom" id="Python Console" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -382,6 +320,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Terminal" order="3" weight="0.44694534" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../PycharmProjects/IDI/first_wave_activation_acitivity_report.ipynb" />
@@ -593,7 +536,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/testing.ipynb" />
     <entry file="file://$PROJECT_DIR$/action_space.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="165">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -603,7 +546,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/memory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="240">
           <caret line="19" column="38" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="38" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -613,8 +556,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+        <state relative-caret-position="1155">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -623,7 +566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
+        <state relative-caret-position="1560">
           <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -640,7 +583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="360">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -650,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="1820">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
