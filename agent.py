@@ -3,6 +3,7 @@ import tensorflow as tf
 import datetime
 from memory import ReplayMemory
 import progressbar
+import pickle
 import math
 
 
@@ -13,6 +14,8 @@ class Agent:
                  memory_length,
                  dueling=True,
                  loss='mse',
+                 load_memory=None,
+                 save_memory=None,
                  load_weights=None,
                  save_weights=None,
                  verbose_action=False):
@@ -20,7 +23,6 @@ class Agent:
         self.environment = environment
         self._optimizer = optimizer
         self._loss = loss
-        self.memory = ReplayMemory(memory_length)
         self.dueling = dueling
 
         # Initialize discount and exploration rate, etc
@@ -37,12 +39,27 @@ class Agent:
         self.target_network = self._build_compile_model()
         self.align_target_model(how='hard')
 
+        self.memory = ReplayMemory(memory_length)
+        if load_memory:
+            self.load_memory(load_memory)
+
         if load_weights:
             self.load_weights(load_weights)
 
         self.save_weights_fp = save_weights
+        self.save_memory_fp = save_memory
         self.start_time = datetime.datetime.now()
         self.verbose_action = verbose_action
+
+    def load_memory(self, fp):
+        with open(fp, 'rb') as f:
+            self.memory.load_memory(pickle.load(f))
+            print(f'loading {self.memory.length} memories...')
+
+    def save_memory(self, fp):
+        print('saving replay memory...')
+        with open(fp, 'wb') as f:
+            pickle.dump(self.memory.get_memory(), f)
 
     def load_weights(self, weights_fp):
         if weights_fp:

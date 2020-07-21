@@ -10,7 +10,7 @@ plt.style.use('ggplot')
 
 def plot_performance(file):
     df = pd.read_csv(file)
-    sns.scatterplot(x='epoch', y='epoch_steps', data=df)
+    sns.regplot(x='epoch', y='epoch_steps', data=df)
 
     plt.title('Total Steps by Epoch')
     plt.ylim([0, df['epoch_steps'].max() + 10])
@@ -120,4 +120,4 @@ class NoisyNetDense(Layer):
 
 
 if __name__ == '__main__':
-    plot_performance('log/log-07-18-2020.csv')
+    plot_performance('log/log-07-21-2020.csv')

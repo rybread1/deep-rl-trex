@@ -107,6 +107,9 @@ class Environment:
                 if (agent.memory.length > agent.pretraining_steps) or (agent.memory.memory_size == agent.memory.length):
                     agent.replay(batch_size, epoch_steps=step)
 
+                if e % 20 == 0:
+                    agent.save_memory(agent.save_memory_fp)
+
                 run_time = datetime.datetime.now() - agent.start_time
                 self.logger.log(log_fn, e, step, agent.total_steps, run_time, agent.epsilon, verbose=True)
 

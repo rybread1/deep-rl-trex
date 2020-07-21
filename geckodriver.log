@@ -24,3 +24,64 @@ _RegisterApplication(), FAILED TO establish the default connection to the Window
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1595340715143	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileG95yrl"
+1595340717814	Marionette	INFO	Listening on port 61468
+1595340717907	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=6f31beb5f809ddc06359c6f7b87f0f24, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1595366310229	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileEVxaXw"
+1595366312856	Marionette	INFO	Listening on port 51290
+1595366312880	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=5b5a41c280c33366b3fb60e00679e524, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript warning: https://solutions.lenovo.com/assets/_combinedfiles/015971a053299b4475f1f82375149e427f02ad9c-ebe6909.js, line 3: Script terminated by timeout at:
+f</e.fn.extend@https://solutions.lenovo.com/assets/_combinedfiles/015971a053299b4475f1f82375149e427f02ad9c-ebe6909.js:3:9086
+simulate@https://solutions.lenovo.com/assets/_combinedfiles/015971a053299b4475f1f82375149e427f02ad9c-ebe6909.js:3:38953
+e@https://solutions.lenovo.com/assets/_combinedfiles/015971a053299b4475f1f82375149e427f02ad9c-ebe6909.js:3:42049
+nrWrapper@https://solutions.lenovo.com/pc-solutions/workstations?cid=us:display:btxhf7&dclid=CJTs4L7L3-oCFZUvAQodoCMBAg#workstations-for-data-science:9:13518
+
+JavaScript error: https://www.lenovo.com/_ui/desktop/common/ISS_Static/WW/site/scripts/galleria/galleria-1.2.9.js, line 3415: Error: Fatal error: Theme CSS could not load after 20 sec. Please download the latest theme at http://galleria.io/customer/.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1595454102422	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofile5ISrMg"
+1595454105068	Marionette	INFO	Listening on port 62412
+1595454105073	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=414d1c845d0ecb50dc7db7f4f143e6b9, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1595454241511	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofile3wziuN"
+1595454243701	Marionette	INFO	Listening on port 63217
+1595454243752	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=414d1c845d0ecb50dc7db7f4f143e6b9, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+1595512774280	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofiletltR82"
+1595512776835	Marionette	INFO	Listening on port 50982
+1595512776924	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=ae06161bc5a22083472c934b02e6683e, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1595514046686	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofilepAkYke"
+1595514049677	Marionette	INFO	Listening on port 51278
+1595514049749	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=ae06161bc5a22083472c934b02e6683e, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
