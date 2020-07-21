@@ -23,7 +23,7 @@ Chrome Trex Game.
 
 
 
-To run a demo of a working agent use:
+To test out a working agent use:
 ```python
 python demo.py
 ```

@@ -5,3 +5,14 @@
 Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
+1595302424727	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileKA8Cse"
+1595302427768	Marionette	INFO	Listening on port 58477
+1595302427787	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=24909b2681f43dfede3297543f813d96, line 62: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
