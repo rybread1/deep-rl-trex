@@ -8,7 +8,7 @@ if __name__ == '__main__':
     # create environment object
     env = Environment()
 
-    memory_fp = 'memory/memory.pkl'
+    memory_fp = '/Users/ryan.osgar/Documents/repos/data_science/trex_memory/memory.pkl'
 
     load_path = 'testing_model/model-weights'
     save_path = 'testing_model/model-weights'
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     agent.set_epsilon_decay_schedule(epsilon=0.00001, epsilon_min=0.000001, annealed_steps=20000)
     agent.set_beta_schedule(beta_start=0.9, beta_max=1, annealed_samplings=1)
 
-    agent.pretraining_steps = mem_length - agent.memory.length
+    agent.pretraining_steps = agent.memory.length - mem_length
     print(f'pretraining for {agent.pretraining_steps} steps...')
 
     env.init_game()
