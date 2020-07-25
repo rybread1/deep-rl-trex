@@ -24,7 +24,7 @@ if __name__ == '__main__':
                   save_memory=memory_fp,
                   load_weights=load_path,
                   save_weights=save_path,
-                  verbose_action=False)
+                  verbose_action=True)
 
     agent.set_epsilon_decay_schedule(epsilon=0.00001, epsilon_min=0.000001, annealed_steps=20000)
     agent.set_beta_schedule(beta_start=0.9, beta_max=1, annealed_samplings=1)
@@ -35,4 +35,4 @@ if __name__ == '__main__':
     env.init_game()
 
     for episode in range(10000000):
-        env.run(episode, agent, batch_size=32, log_fn='log-07-22-2020.csv')
+        env.run(episode, agent, batch_size=32, log_fn='log-07-25-2020.csv')
