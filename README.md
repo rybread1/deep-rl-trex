@@ -1,7 +1,7 @@
 # DeepRlTrex
 
 Reinforcement learning implementation of double-deep-q-learning, dueling network architure and PER to play the Google 
-Chrome Trex Game.
+Chrome Trex Game directly from the browser.
 
 ![](/assets/trex_demo.gif)
 
