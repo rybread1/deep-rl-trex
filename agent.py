@@ -5,6 +5,7 @@ from memory import ReplayMemory
 import progressbar
 import pickle
 import math
+from utils import NoisyNetDense
 
 
 class Agent:
@@ -14,16 +15,19 @@ class Agent:
                  memory_length,
                  dueling=True,
                  loss='mse',
-                 load_memory=None,
+                 noisy_net=False,
+                 egreedy=False,
                  save_memory=None,
-                 load_weights=None,
                  save_weights=None,
-                 verbose_action=False):
+                 verbose_action=False,
+                 ):
 
         self.environment = environment
         self._optimizer = optimizer
         self._loss = loss
         self.dueling = dueling
+        self.egreedy = egreedy
+        self.noisy_net = noisy_net
 
         # Initialize discount and exploration rate, etc
         self.total_steps = 0
@@ -40,11 +44,6 @@ class Agent:
         self.align_target_model(how='hard')
 
         self.memory = ReplayMemory(memory_length)
-        if load_memory:
-            self.load_memory(load_memory)
-
-        if load_weights:
-            self.load_weights(load_weights)
 
         self.save_weights_fp = save_weights
         self.save_memory_fp = save_memory
@@ -57,9 +56,10 @@ class Agent:
             print(f'loading {self.memory.length} memories...')
 
     def save_memory(self, fp):
-        print('saving replay memory...')
-        with open(fp, 'wb') as f:
-            pickle.dump(self.memory.get_memory(), f)
+        if fp:
+            with open(fp, 'wb') as f:
+                print('saving replay memory...')
+                pickle.dump(self.memory.get_memory(), f)
 
     def load_weights(self, weights_fp):
         if weights_fp:
@@ -94,8 +94,9 @@ class Agent:
         self.memory.add((state, action, reward, next_state, terminated))
         self.total_steps += 1
 
-        if (self.epsilon > self.epsilon_min) and (self.memory.length > self.pretraining_steps):
-            self._decay_epsilon()
+        if not self.egreedy:
+            if (self.epsilon > self.epsilon_min) and (self.memory.length > self.pretraining_steps):
+                self._decay_epsilon()
 
     def batch_store(self, batch_load):
         batch_load[-2][2] = -0.1  # custom reward altering
@@ -109,12 +110,20 @@ class Agent:
         conv3 = tf.keras.layers.Conv2D(64, (3, 3), strides=1, padding='same', activation='relu')(conv2)
         conv3 = tf.keras.layers.Flatten()(conv3)
 
-        advt = tf.keras.layers.Dense(256, activation='relu')(conv3)
-        final = tf.keras.layers.Dense(2)(advt)
+        if self.noisy_net:
+            advt = NoisyNetDense(256, activation='relu')(conv3)
+            final = NoisyNetDense(2)(advt)
+        else:
+            advt = tf.keras.layers.Dense(256, activation='relu')(conv3)
+            final = tf.keras.layers.Dense(2)(advt)
 
         if self.dueling:
-            value = tf.keras.layers.Dense(256, activation='relu')(conv3)
-            value = tf.keras.layers.Dense(1)(value)
+            if self.noisy_net:
+                value = NoisyNetDense(256, activation='relu')(conv3)
+                value = NoisyNetDense(1)(value)
+            else:
+                value = tf.keras.layers.Dense(256, activation='relu')(conv3)
+                value = tf.keras.layers.Dense(1)(value)
 
             advt = tf.keras.layers.Lambda(lambda x: x - tf.reduce_mean(x, axis=1, keepdims=True))(final)
             final = tf.keras.layers.Add()([value, advt])
@@ -136,11 +145,12 @@ class Agent:
                 t.assign(t * (1 - self.tau) + (e * self.tau))
 
     def choose_action(self, state):
-        if np.random.rand() <= self.epsilon:
-            action = self.environment.action_space.sample()
-            if self.verbose_action:
-                print(f'action: {action}, q: random')
-            return action
+        if not self.egreedy:
+            if np.random.rand() <= self.epsilon:
+                action = self.environment.action_space.sample()
+                if self.verbose_action:
+                    print(f'action: {action}, q: random')
+                return action
 
         q_values = self.predict(state, use_target=False)
         action = np.argmax(q_values[0])

@@ -10,6 +10,7 @@ plt.style.use('ggplot')
 
 def plot_performance(file):
     df = pd.read_csv(file)
+    df['epoch'] = range(0, len(df))
     sns.regplot(x='epoch', y='epoch_steps', data=df)
 
     plt.title('Total Steps by Epoch')
@@ -120,4 +121,4 @@ class NoisyNetDense(Layer):
 
 
 if __name__ == '__main__':
-    plot_performance('log/log-07-21-2020.csv')
+    plot_performance('log/log-07-26-2020_noisy2.csv')
