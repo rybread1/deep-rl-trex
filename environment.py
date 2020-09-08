@@ -17,13 +17,12 @@ import datetime
 class Environment:
     def __init__(self):
         self.url = 'http://www.trex-game.skipser.com/'
-        self.window_width = GetSystemMetrics(0) * 0.3
+        self.window_width = GetSystemMetrics(0) * 0.37
         self.window_height = GetSystemMetrics(1) * 0.8
 
         self.sct = mss()
-        self.bbox = {'top': 350, 'left': 50, 'width': 500, 'height': 100}
-        self.terminal_bbox = {'top': 340, 'left': 255, 'width': 1, 'height': 5}
-        self.game_over_sprite = Image.open('assets/G_game_over.png')
+        self.bbox = {'top': 350, 'left': 50, 'width': 630, 'height': 80}
+        self.terminal_bbox = {'top': 360, 'left': 357, 'width': 5, 'height': 5}
 
         self.action_space = ActionSpace()
         self.actions = self.action_space.actions
@@ -50,7 +49,7 @@ class Environment:
         terminal = self._is_terminal()
 
         if not terminal:
-            reward = 0.01
+            reward = 0
         else:
             reward = -1
 
@@ -68,7 +67,7 @@ class Environment:
             self.frame_history.append(self._grab_sct())
 
     def _update_state(self):
-        return np.stack(self.frame_history).reshape(1, 50, 250, 4)
+        return np.stack(self.frame_history).reshape(1, 40, 315, 4)
 
     def _grab_sct(self):
         sct_img = self.sct.grab(self.bbox)
@@ -82,15 +81,19 @@ class Environment:
     def _is_terminal(self):
         sct_img = self.sct.grab(self.terminal_bbox)
         img = Image.frombytes("RGB", sct_img.size, sct_img.bgra, "raw", "BGRX").convert('L')
-        return (np.array([[83], [83], [83], [83], [83]], dtype='uint8') == np.array(img)).all()
+
+        terminal_array_match = np.array([[83, 83, 83, 83, 83],
+                                         [83, 83, 83, 83, 83],
+                                         [83, 83, 83, 83, 83],
+                                         [83, 83, 83, 83, 83],
+                                         [83, 83, 247, 247, 247]])
+
+        return (terminal_array_match == np.array(img)).all()
 
     def init_game(self, agent):
         resp = input('enter "y" to start training: ')
         if resp == 'y':
             self.render()
-            self.reset_frame_history()
-            self.state = self._update_state()
-            agent.choose_action(self.state)
         else:
             exit()
 

@@ -17,7 +17,7 @@ class Action:
             return 0
 
         if self.action == 'none':
-            time.sleep(0.02)
+            time.sleep(0.01)
             return 1
 
 

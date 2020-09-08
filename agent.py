@@ -5,7 +5,7 @@ from memory import ReplayMemory
 import progressbar
 import pickle
 import math
-import utils
+from NoisyDense import NoisyNetDense
 
 
 class Agent:
@@ -35,7 +35,7 @@ class Agent:
         self.epsilon = 1
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.00005
-        self.tau = 0.05
+        self.tau = 0.08
         self.pretraining_steps = 0
 
         # Build networks
@@ -104,23 +104,23 @@ class Agent:
             self.store(*row)
 
     def _build_compile_model(self):
-        inputs = tf.keras.layers.Input(shape=(50, 250, 4))
+        inputs = tf.keras.layers.Input(shape=(40, 315, 4))
         conv1 = tf.keras.layers.Conv2D(32, (8, 8), strides=4, padding='same', activation='relu')(inputs)
         conv2 = tf.keras.layers.Conv2D(64, (4, 4), strides=2, padding='same', activation='relu')(conv1)
         conv3 = tf.keras.layers.Conv2D(64, (3, 3), strides=1, padding='same', activation='relu')(conv2)
         conv3 = tf.keras.layers.Flatten()(conv3)
 
         if self.noisy_net:
-            advt = utils.NoisyNetDense(256, activation='relu')(conv3)
-            final = utils.NoisyNetDense(2)(advt)
+            advt = NoisyNetDense(256, activation='relu')(conv3)
+            final = NoisyNetDense(2)(advt)
         else:
             advt = tf.keras.layers.Dense(256, activation='relu')(conv3)
             final = tf.keras.layers.Dense(2)(advt)
 
         if self.dueling:
             if self.noisy_net:
-                value = utils.NoisyNetDense(256, activation='relu')(conv3)
-                value = utils.NoisyNetDense(1)(value)
+                value = NoisyNetDense(256, activation='relu')(conv3)
+                value = NoisyNetDense(1)(value)
             else:
                 value = tf.keras.layers.Dense(256, activation='relu')(conv3)
                 value = tf.keras.layers.Dense(1)(value)
@@ -161,12 +161,12 @@ class Agent:
     def train(self, batch, is_weights):
 
         td_errors = np.zeros(len(batch))
-        states = np.zeros((len(batch), 50, 250, 4))
+        states = np.zeros((len(batch), 40, 315, 4))
         targets = np.zeros((len(batch), 2))
 
         for i, (state, action, reward, next_state, terminated) in enumerate(batch):
             target, td_error = self._get_target(state, action, reward, next_state, terminated)
-            states[i] = state.reshape(50, 250, 4)
+            states[i] = state.reshape(40, 315, 4)
             targets[i] = target
             td_errors[i] = td_error
 
@@ -180,7 +180,7 @@ class Agent:
         num_batches = 1
  
         if epoch_steps:
-            num_batches = int(np.max([np.floor(epoch_steps / 4), 1]))
+            num_batches = int(np.max([np.floor(epoch_steps / 8), 1]))
 
         bar = progressbar.ProgressBar(maxval=num_batches,
                                       widgets=[f'training - ', progressbar.widgets.Counter(), f'/{num_batches} ',
