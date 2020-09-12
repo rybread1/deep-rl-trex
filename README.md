@@ -5,10 +5,6 @@ Chrome Trex Game directly from the browser.
 
 ![](/assets/trex_demo.gif)
 
-To try out a pretrained agent use:
-```python
-python demo.py
-```
 
 **References:**
 - Double Deep Q-Network: https://arxiv.org/pdf/1509.06461.pdf
