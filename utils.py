@@ -17,4 +17,4 @@ def plot_performance(file):
 
 
 if __name__ == '__main__':
-    plot_performance('log/log-07-26-2020_noisy2.csv')
+    plot_performance('log/per_092520.csv')

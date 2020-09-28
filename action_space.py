@@ -13,11 +13,11 @@ class Action:
     def act(self):
         if self.action == 'space':
             pyautogui.press('space')
-            time.sleep(.47)
+            time.sleep(.45)
             return 0
 
         if self.action == 'none':
-            time.sleep(0.01)
+            time.sleep(0.02)
             return 1
 
 

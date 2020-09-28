@@ -49,7 +49,7 @@ class Environment:
         terminal = self._is_terminal()
 
         if not terminal:
-            reward = 0
+            reward = 0.1
         else:
             reward = -1
 
@@ -67,13 +67,13 @@ class Environment:
             self.frame_history.append(self._grab_sct())
 
     def _update_state(self):
-        return np.stack(self.frame_history).reshape(1, 40, 315, 4)
+        return np.stack(self.frame_history).reshape(1, 20, 157, 4)
 
     def _grab_sct(self):
         sct_img = self.sct.grab(self.bbox)
         img = Image.frombytes("RGB", sct_img.size, sct_img.bgra, "raw", "BGRX").convert('L')
 
-        (width, height) = (img.width // 2, img.height // 2)
+        (width, height) = (img.width // 4, img.height // 4)
         img = img.resize((width, height))
         img_np = np.array(img) / 255.0
         return np.expand_dims(img_np, axis=0)
