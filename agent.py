@@ -182,8 +182,8 @@ class Agent:
  
         if epoch_steps:
             num_batches = int(np.max([np.floor(epoch_steps / 8), 1]))
-            if num_batches > 312:
-                num_batches = 312
+            if num_batches > 500:
+                num_batches = 500
 
         bar = progressbar.ProgressBar(maxval=num_batches,
                                       widgets=[f'training - ', progressbar.widgets.Counter(), f'/{num_batches} ',

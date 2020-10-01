@@ -9,7 +9,7 @@ plt.style.use('ggplot')
 def plot_performance(file):
     df = pd.read_csv(file)
     df['epoch'] = range(0, len(df))
-    sns.regplot(x='epoch', y='epoch_steps', data=df)
+    sns.regplot(x='epoch', y='epoch_steps', data=df,  marker=".", scatter_kws={"s": 10})
 
     plt.title('Total Steps by Epoch')
     plt.ylim([0, df['epoch_steps'].max() + 10])
