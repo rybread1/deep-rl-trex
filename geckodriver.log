@@ -280,3 +280,30 @@ Exiting due to channel error.
 Exiting due to channel error.
 1596391864153	Marionette	INFO	Stopped listening on port 56058
 1596391865032	Marionette	INFO	Stopped listening on port 56103
+1601600316785	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileRqNkjL"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601600319881	Marionette	INFO	Listening on port 59444
+1601600319907	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=18fc11e9ebc947729f0e2bcf68364dae, line 59: uncaught exception: Error: invalid version specified
+1601600507506	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileX26c5J"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601600510574	Marionette	INFO	Listening on port 59631
+1601600510619	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=18fc11e9ebc947729f0e2bcf68364dae, line 59: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+1601601102616	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--width=800" "--height=825" "-foreground" "-no-remote" "-profile" "/var/folders/pl/8hb0pb411bxbncqgjzgdz8jhtd21c2/T/rust_mozprofileLouNz9"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601601105508	Marionette	INFO	Listening on port 59946
+1601601105537	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=18fc11e9ebc947729f0e2bcf68364dae, line 59: uncaught exception: Error: invalid version specified
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

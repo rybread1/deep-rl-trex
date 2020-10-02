@@ -24,12 +24,12 @@ if __name__ == '__main__':
                   save_weights=save_path,
                   verbose_action=True)
 
-    #agent.load_weights(save_path)
-    #agent.load_memory(memory_fp)
-    agent.set_beta_schedule(beta_start=0.4, beta_max=1, annealed_samplings=2000)
-    agent.set_epsilon_decay_schedule(1, 0.0001, 100)
+    agent.load_weights(save_path)
+    agent.load_memory(memory_fp)
+    agent.set_beta_schedule(beta_start=0.9, beta_max=1, annealed_samplings=2000)
+    # agent.set_epsilon_decay_schedule(0.000001, 0.0000001, 100)
 
-    agent.pretraining_steps = 10000
+    agent.pretraining_steps = 0
     print(f'pretraining for {agent.pretraining_steps} steps...')
 
     env.init_game()

@@ -178,7 +178,6 @@ class Agent:
     def replay(self, batch_size, epoch_steps=None):
 
         num_batches = 1
- 
         if epoch_steps:
             num_batches = int(np.max([np.floor(epoch_steps / 4), 1]))
 
