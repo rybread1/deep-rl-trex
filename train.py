@@ -8,10 +8,10 @@ if __name__ == '__main__':
     # create environment object
     env = Environment()
 
-    memory_fp = '/Users/ryan.osgar/Documents/repos/data_science/trex_memory/memory.pkl'
-    save_path = '/Users/ryan.osgar/Documents/repos/data_science/noisy_model/model-weights'
+    memory_fp = '/path/to/your/memory'
+    save_path = '/model/model-weights'
 
-    mem_length = 80000
+    mem_length = 100000
 
     agent = Agent(env,
                   tf.keras.optimizers.Adam(learning_rate=0.0001),
@@ -26,8 +26,8 @@ if __name__ == '__main__':
 
     #agent.load_weights(save_path)
     #agent.load_memory(memory_fp)
-    agent.set_beta_schedule(beta_start=0.4, beta_max=1, annealed_samplings=2000)
-    agent.set_epsilon_decay_schedule(1, 0.0001, 100)
+    agent.set_beta_schedule(beta_start=0.4, beta_max=1, annealed_samplings=10000)
+    agent.set_epsilon_decay_schedule(1, 0.00001, 10000)
 
     agent.pretraining_steps = 10000
     print(f'pretraining for {agent.pretraining_steps} steps...')
