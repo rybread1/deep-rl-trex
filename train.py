@@ -1,6 +1,7 @@
 import tensorflow as tf
 from environment import Environment
 from agent import Agent
+from logger import Logger
 
 if __name__ == '__main__':
     tf.compat.v1.enable_eager_execution()
@@ -8,6 +9,7 @@ if __name__ == '__main__':
 
     # create environment object
     env = Environment()
+    logger = Logger(append_existing_log=False)
 
     memory_fp = 'C:/Users/ryano/rl_projects/trex_memory/memory.pkl'
     save_path = 'C:/Users/ryano/repos/deep-rl-trex/model/model-weights-noisy'
@@ -33,8 +35,8 @@ if __name__ == '__main__':
     agent.pretraining_steps = 20000
     print(f'pretraining for {agent.pretraining_steps} steps...')
 
-    env.init_game(agent)
+    env.init_game()
 
     for episode in range(10000000):
-        env.run(episode, agent, batch_size=32, log_fn='per_093020.csv')
+        env.run(episode, agent, batch_size=32, logger=logger)
 

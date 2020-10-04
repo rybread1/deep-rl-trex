@@ -2,7 +2,6 @@ from mss import mss
 import time
 from PIL import Image
 from collections import deque
-from logger import Logger
 from win32api import GetSystemMetrics
 
 from selenium import webdriver
@@ -26,8 +25,6 @@ class Environment:
 
         self.state = None
         self.frame_history = deque(maxlen=4)
-
-        self.logger = Logger()
 
         self.driver = None
         self.window_element = None
@@ -98,23 +95,26 @@ class Environment:
 
         return (terminal_array_match == np.array(img)).all()
 
-    def init_game(self, agent):
+    def init_game(self):
         resp = input('enter "y" to start training: ')
         if resp == 'y':
             self.render()
         else:
             exit()
 
-    def run(self, e, agent, batch_size, log_fn):
+    def run(self, epoch, agent, batch_size, logger):
 
         self.reset()
+        epoch_start_time = datetime.datetime.now()
         batch_loader = []
+        q_values = []
 
         for step in range(10000000):
 
-            action = agent.choose_action(self.state)
+            action, q_value = agent.choose_action(self.state)
             next_state, reward, terminal = self.step(action)
             batch_loader.append([self.state, action, reward, next_state, terminal])
+            q_values.append(q_value)
             self.state = next_state
 
             if terminal:
@@ -123,11 +123,18 @@ class Environment:
                 if (agent.memory.length > agent.pretraining_steps) or (agent.memory.memory_size == agent.memory.length):
                     agent.replay(batch_size, epoch_steps=step)
 
-                if (e % 20 == 0) and (e != 0):
+                if (epoch % 40 == 0) and (epoch != 0):
                     agent.save_memory(agent.save_memory_fp)
 
-                run_time = datetime.datetime.now() - agent.start_time
-                self.logger.log(log_fn, e, step, agent.total_steps, run_time, agent.epsilon, verbose=True)
+                log_data = {
+                    'epoch': epoch,
+                    'epoch_steps': step,
+                    'epoch_tot_rewards': sum([x[2] for x in batch_loader]),
+                    'epoch_time': epoch_start_time - datetime.datetime.now(),
+                    'epoch_avg_q': np.mean(q_values),
+                }
+
+                logger.log(agent, log_data, verbose=True)
 
                 break
 
