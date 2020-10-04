@@ -130,7 +130,7 @@ class Environment:
                     'epoch': epoch,
                     'epoch_steps': step,
                     'epoch_tot_rewards': sum([x[2] for x in batch_loader]),
-                    'epoch_time': epoch_start_time - datetime.datetime.now(),
+                    'epoch_time': datetime.datetime.now() - epoch_start_time,
                     'epoch_avg_q': np.mean(q_values),
                 }
 
