@@ -7,7 +7,7 @@ class Logger:
     def __init__(self, append_existing_log=False):
         self.append_existing_log = append_existing_log
         self.log_dir = None
-
+        self.csv_fp = None
         self.create_log_dir()
 
     def create_log_dir(self):
@@ -18,6 +18,8 @@ class Logger:
 
         if not path.isdir(self.log_dir):
             mkdir(path.join(self.log_dir))
+
+        self.csv_fp = path.join(self.log_dir, 'log.csv')
 
     def log(self, agent, log_data, verbose=True):
 
