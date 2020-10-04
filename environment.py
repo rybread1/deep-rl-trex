@@ -43,7 +43,10 @@ class Environment:
                                         options=opts)
         self.driver.get(self.url)
         self.window_element = self.driver.find_element_by_id("t")
-        self.action_space = ActionSpace(self.window_element)
+        self.action_space = ActionSpace(self.window_element,
+                                        space_sleep=0.59,
+                                        no_action_sleep=0.02)
+
         self.actions = self.action_space.actions
 
     def step(self, action):
