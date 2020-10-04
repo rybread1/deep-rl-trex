@@ -42,11 +42,11 @@ class Logger:
                 tot_run_time]
 
         if path.exists(self.log_dir):
-            pd.DataFrame(data).T.to_csv(self.log_dir, index=False, header=False, mode='a')
+            pd.DataFrame(data).T.to_csv(self.csv_fp, index=False, header=False, mode='a')
 
         else:
             cols = ['epoch', 'epoch_steps', 'epoch_rewards', 'epoch_time', 'epoch_avg_q', 'total_steps',
                     'epsilon', 'beta', 'memory_len', 'total_run_time']
 
-            pd.DataFrame(data, index=cols).T.to_csv(self.log_dir, index=False)
+            pd.DataFrame(data, index=cols).T.to_csv(self.csv_fp, index=False)
 
