@@ -99,8 +99,8 @@ class Agent:
                 self._decay_epsilon()
 
     def batch_store(self, batch_load):
-        batch_load[-2][2] = -0.1  # custom reward altering
-        # batch_load[-3][2] = -0.01  # custom reward altering
+       # batch_load[-2][2] = -0.1  # custom reward altering
+        #batch_load[-3][2] = -0.01  # custom reward altering
         for row in batch_load:
             self.store(*row)
 

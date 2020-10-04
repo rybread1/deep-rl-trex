@@ -24,22 +24,27 @@ class Environment:
         self.bbox = {'top': 350, 'left': 50, 'width': 630, 'height': 80}
         self.terminal_bbox = {'top': 360, 'left': 357, 'width': 5, 'height': 5}
 
-        self.action_space = ActionSpace()
-        self.actions = self.action_space.actions
-
         self.state = None
         self.frame_history = deque(maxlen=4)
 
         self.logger = Logger()
+
+        self.driver = None
+        self.window_element = None
+        self.action_space = None
+        self.actions = None
 
     def render(self):
         opts = Options()
         opts.add_argument(f"--width={self.window_width}")
         opts.add_argument(f"--height={self.window_height}")
 
-        driver = webdriver.Firefox(executable_path='/Users/ryano/Downloads/geckodriver-v0.27.0-win64/geckodriver',
-                                   options=opts)
-        driver.get(self.url)
+        self.driver = webdriver.Firefox(executable_path='/Users/ryano/Downloads/geckodriver-v0.27.0-win64/geckodriver',
+                                        options=opts)
+        self.driver.get(self.url)
+        self.window_element = self.driver.find_element_by_id("t")
+        self.action_space = ActionSpace(self.window_element)
+        self.actions = self.action_space.actions
 
     def step(self, action):
 

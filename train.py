@@ -10,7 +10,7 @@ if __name__ == '__main__':
     env = Environment()
 
     memory_fp = 'C:/Users/ryano/rl_projects/trex_memory/memory.pkl'
-    save_path = 'C:/Users/ryano/repos/deep-rl-trex/model/model-weights-3'
+    save_path = 'C:/Users/ryano/repos/deep-rl-trex/model/model-weights-noisy'
 
     mem_length = 150000
 
@@ -18,19 +18,19 @@ if __name__ == '__main__':
                   tf.keras.optimizers.Adam(learning_rate=0.0001),
                   loss='mse',
                   memory_length=mem_length,
-                  dueling=False,
-                  noisy_net=False,
-                  egreedy=False,
-                  save_memory=memory_fp,
-                  save_weights=save_path,
+                  dueling=True,
+                  noisy_net=True,
+                  egreedy=True,
+                  save_memory=None,
+                  save_weights=None,
                   verbose_action=True)
 
     # agent.load_weights(save_path)
     # agent.load_memory(memory_fp)
     agent.set_beta_schedule(beta_start=0.4, beta_max=1, annealed_samplings=10000)
-    agent.set_epsilon_decay_schedule(epsilon=1, epsilon_min=0.00001, annealed_steps=50000)
+    # agent.set_epsilon_decay_schedule(epsilon=0.0000001, epsilon_min=0.0000001, annealed_steps=50000)
 
-    agent.pretraining_steps = 10000
+    agent.pretraining_steps = 20000
     print(f'pretraining for {agent.pretraining_steps} steps...')
 
     env.init_game(agent)

@@ -1,2 +1,2 @@
-model_checkpoint_path: "model-weights-3"
-all_model_checkpoint_paths: "model-weights-3"
+model_checkpoint_path: "model-weights-noisy"
+all_model_checkpoint_paths: "model-weights-noisy"
