@@ -35,7 +35,7 @@ class Agent:
         self.epsilon = 1
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.00005
-        self.tau = 0.08
+        self.tau = 0.05
         self.pretraining_steps = 0
 
         # Build networks
@@ -100,7 +100,7 @@ class Agent:
 
     def batch_store(self, batch_load):
         batch_load[-2][2] = -0.1  # custom reward altering
-        batch_load[-3][2] = -0.01  # custom reward altering
+        batch_load[-3][2] = 0  # custom reward altering
         for row in batch_load:
             self.store(*row)
 

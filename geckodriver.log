@@ -2329,3 +2329,74 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1601842214628	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=c4753e27a2d533d99999433812b7f8fc, line 59: uncaught exception: Error: invalid version specified
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1601842677396	Marionette	INFO	Stopped listening on port 62761
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1601842693701	geckodriver	INFO	Listening on 127.0.0.1:62873
+1601842696712	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--width=710.4" "--height=864.0" "-foreground" "-no-remote" "-profile" "C:\\Users\\ryano\\AppData\\Local\\Temp\\rust_mozprofileEOr5bR"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601842698958	Marionette	INFO	Listening on port 62881
+1601842699322	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=c4753e27a2d533d99999433812b7f8fc, line 59: uncaught exception: Error: invalid version specified
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1601842766503	Marionette	INFO	Stopped listening on port 62881
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1601842787591	geckodriver	INFO	Listening on 127.0.0.1:62954
+1601842790618	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--width=710.4" "--height=864.0" "-foreground" "-no-remote" "-profile" "C:\\Users\\ryano\\AppData\\Local\\Temp\\rust_mozprofilen84Naf"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601842792796	Marionette	INFO	Listening on port 62962
+1601842793225	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=c4753e27a2d533d99999433812b7f8fc, line 59: uncaught exception: Error: invalid version specified
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1601842810568	Marionette	INFO	Stopped listening on port 62962
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1601842819039	geckodriver	INFO	Listening on 127.0.0.1:63034
+1601842822051	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--width=710.4" "--height=864.0" "-foreground" "-no-remote" "-profile" "C:\\Users\\ryano\\AppData\\Local\\Temp\\rust_mozprofileJjxOPj"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601842824297	Marionette	INFO	Listening on port 63042
+1601842824678	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=c4753e27a2d533d99999433812b7f8fc, line 59: uncaught exception: Error: invalid version specified
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1601909986860	Marionette	INFO	Stopped listening on port 63042
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1601910009711	geckodriver	INFO	Listening on 127.0.0.1:65074
+1601910012721	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--width=710.4" "--height=864.0" "-foreground" "-no-remote" "-profile" "C:\\Users\\ryano\\AppData\\Local\\Temp\\rust_mozprofileovIml9"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601910015214	Marionette	INFO	Listening on port 65082
+1601910015338	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://connect.facebook.net/en_US/sdk.js?hash=1b21c568a3cd1702f750514f056be137, line 59: uncaught exception: Error: invalid version specified
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1601947178474	Marionette	INFO	Stopped listening on port 65082
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

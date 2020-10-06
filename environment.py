@@ -14,7 +14,7 @@ import datetime
 
 
 class Environment:
-    def __init__(self):
+    def __init__(self, space_sleep=0.58, no_action_sleep=0.02):
         self.url = 'http://www.trex-game.skipser.com/'
         self.window_width = GetSystemMetrics(0) * 0.37
         self.window_height = GetSystemMetrics(1) * 0.8
@@ -31,6 +31,9 @@ class Environment:
         self.action_space = None
         self.actions = None
 
+        self.space_sleep = space_sleep
+        self.no_action_sleep = no_action_sleep
+
     def render(self):
         opts = Options()
         opts.add_argument(f"--width={self.window_width}")
@@ -41,8 +44,8 @@ class Environment:
         self.driver.get(self.url)
         self.window_element = self.driver.find_element_by_id("t")
         self.action_space = ActionSpace(self.window_element,
-                                        space_sleep=0.58,
-                                        no_action_sleep=0.02)
+                                        space_sleep=self.space_sleep,
+                                        no_action_sleep=self.no_action_sleep)
 
         self.actions = self.action_space.actions
 

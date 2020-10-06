@@ -4,16 +4,17 @@ from os import path, mkdir
 
 
 class Logger:
-    def __init__(self, append_existing_log=False):
-        self.append_existing_log = append_existing_log
+    def __init__(self, fp=None):
+        self.fp = fp
         self.log_dir = None
         self.csv_fp = None
         self.create_log_dir()
 
     def create_log_dir(self):
         self.log_dir = f'log/{datetime.now().strftime("%Y%m%d-%H%M%S")}'
-        if self.append_existing_log:
-            self.log_dir = input('enter existing log directory fp (e.g. log/xxxxxxxx')
+
+        if self.fp:
+            self.log_dir = self.fp
             assert path.isdir(self.log_dir), 'Enter an existing log directory!'
 
         if not path.isdir(self.log_dir):
@@ -27,7 +28,7 @@ class Logger:
 
         if verbose:
             print(
-                '=======================================================\n',
+                '\n=======================================================\n',
                 f'epoch: {log_data["epoch"]}\n'
                 f'    epoch steps: {log_data["epoch_steps"]}\n'
                 f'    epoch rewards: {log_data["epoch_tot_rewards"]}\n'
@@ -37,20 +38,20 @@ class Logger:
                 f'    epsilon: {agent.epsilon}\n'
                 f'    beta: {agent.memory.beta}\n'
                 f'    memory len: {agent.memory.length}\n'
-                f'    total run time: {tot_run_time}]\n',
-                '======================================================='
+                f'    total run time: {tot_run_time}\n',
+                '=======================================================\n'
             )
 
         data = [log_data["epoch"], log_data["epoch_steps"], log_data["epoch_tot_rewards"], log_data["epoch_time"],
                 log_data["epoch_avg_q"], agent.total_steps, agent.epsilon, agent.memory.beta, agent.memory.length,
-                tot_run_time, agent.dueling, agent.noisy_net]
+                tot_run_time, agent.dueling, agent.noisy_net, agent.pretraining_steps]
 
         if path.exists(self.csv_fp):
             pd.DataFrame(data).T.to_csv(self.csv_fp, index=False, header=False, mode='a')
 
         else:
             cols = ['epoch', 'epoch_steps', 'epoch_rewards', 'epoch_time', 'epoch_avg_q', 'total_steps',
-                    'epsilon', 'beta', 'memory_len', 'total_run_time', 'dueling', 'noisy_net']
+                    'epsilon', 'beta', 'memory_len', 'total_run_time', 'dueling', 'noisy_net', 'pretraining_steps']
 
             pd.DataFrame(data, index=cols).T.to_csv(self.csv_fp, index=False)
 
