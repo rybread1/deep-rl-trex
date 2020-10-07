@@ -35,7 +35,7 @@ class Agent:
         self.epsilon = 1
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.00005
-        self.tau = 0.05
+        self.tau = 0.005
         self.pretraining_steps = 0
 
         # Build networks

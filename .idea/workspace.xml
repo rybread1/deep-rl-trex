@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4f02c7d-8070-4ef9-ad3b-5b39e6a3794e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-2.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-2.data-00000-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-2.data-00001-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-2.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-3.data-00000-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-3.data-00001-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-3.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-noisy.data-00000-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-noisy.data-00001-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model-weights-noisy.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,12 +80,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="9" />
-          <entry key="py" value="2508" />
+          <entry key="py" value="2696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2517" />
+          <entry key="Python" value="2705" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="390">
+              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -119,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1980">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="323">
+              <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -145,8 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="682">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -157,12 +169,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="612">
+              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1601947652696" expanded="true" signature="125:237" ph="..." />
-                <marker date="1601947652696" expanded="true" signature="262:557" ph="..." />
+                <marker date="1602086134304" expanded="true" signature="125:237" ph="..." />
+                <marker date="1602086134304" expanded="true" signature="262:557" ph="..." />
               </folding>
             </state>
           </provider>
@@ -247,14 +259,14 @@
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/action_space.py" />
         <option value="$PROJECT_DIR$/environment.py" />
-        <option value="$PROJECT_DIR$/agent.py" />
         <option value="$PROJECT_DIR$/logger.py" />
+        <option value="$PROJECT_DIR$/agent.py" />
         <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="898" />
+    <option name="x" value="882" />
     <option name="y" value="6" />
     <option name="width" value="1045" />
     <option name="height" value="963" />
@@ -272,6 +284,11 @@
             <path>
               <item name="deep-rl-trex" type="b2602c69:ProjectViewProjectNode" />
               <item name="deep-rl-trex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-rl-trex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-rl-trex" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -429,18 +446,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="898" y="6" width="1045" height="963" extended-state="0" />
-    <editor active="true" />
+    <frame x="882" y="6" width="1045" height="963" extended-state="0" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.30558375" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.30558375" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32970297" />
       <window_info anchor="bottom" id="Python Console" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010917" side_tool="true" weight="0.3023001" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3253012" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4989083" visible="true" weight="0.30156815" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4989083" weight="0.30156815" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -581,28 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/action_space.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#1#48#0" expanded="true" />
-            <marker date="1601838164956" expanded="true" signature="269:659" ph="..." />
-            <marker date="1601838164956" expanded="true" signature="315:363" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/20201004-162014/log.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-50958" />
@@ -616,32 +610,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agent.py">
+    <entry file="file://$PROJECT_DIR$/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1980">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="682">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action_space.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#1#48#0" expanded="true" />
+            <marker date="1601838164956" expanded="true" signature="269:659" ph="..." />
+            <marker date="1601838164956" expanded="true" signature="315:363" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="612">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1601947652696" expanded="true" signature="125:237" ph="..." />
-            <marker date="1601947652696" expanded="true" signature="262:557" ph="..." />
+            <marker date="1602086134304" expanded="true" signature="125:237" ph="..." />
+            <marker date="1602086134304" expanded="true" signature="262:557" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="390">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

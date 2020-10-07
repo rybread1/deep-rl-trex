@@ -44,14 +44,15 @@ class Logger:
 
         data = [log_data["epoch"], log_data["epoch_steps"], log_data["epoch_tot_rewards"], log_data["epoch_time"],
                 log_data["epoch_avg_q"], agent.total_steps, agent.epsilon, agent.memory.beta, agent.memory.length,
-                tot_run_time, agent.dueling, agent.noisy_net, agent.pretraining_steps]
+                tot_run_time, agent.dueling, agent.noisy_net, agent.pretraining_steps, agent.tau]
 
         if path.exists(self.csv_fp):
             pd.DataFrame(data).T.to_csv(self.csv_fp, index=False, header=False, mode='a')
 
         else:
             cols = ['epoch', 'epoch_steps', 'epoch_rewards', 'epoch_time', 'epoch_avg_q', 'total_steps',
-                    'epsilon', 'beta', 'memory_len', 'total_run_time', 'dueling', 'noisy_net', 'pretraining_steps']
+                    'epsilon', 'beta', 'memory_len', 'total_run_time', 'dueling', 'noisy_net', 'pretraining_steps',
+                    'tau']
 
             pd.DataFrame(data, index=cols).T.to_csv(self.csv_fp, index=False)
 

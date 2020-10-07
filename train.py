@@ -8,7 +8,7 @@ if __name__ == '__main__':
     tf.device("/gpu:0")
 
     # create environment object
-    env = Environment(space_sleep=0.55, no_action_sleep=0.04)
+    env = Environment(space_sleep=0.55, no_action_sleep=0.03)
     logger = Logger(fp=None)
 
     memory_fp = 'C:/Users/ryano/rl_projects/trex_memory/memory.pkl'
@@ -25,7 +25,7 @@ if __name__ == '__main__':
                   egreedy=True,
                   save_memory=memory_fp,
                   save_weights=save_path,
-                  verbose_action=False)
+                  verbose_action=True)
 
     # agent.load_weights(save_path)
     # agent.load_memory(memory_fp)
