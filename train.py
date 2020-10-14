@@ -8,11 +8,11 @@ if __name__ == '__main__':
     tf.device("/gpu:0")
 
     # create environment object
-    env = Environment(space_sleep=0.55, no_action_sleep=0.03)
+    env = Environment(space_sleep=0.55, no_action_sleep=0.05)
     logger = Logger(fp=None)
 
     memory_fp = 'C:/Users/ryano/rl_projects/trex_memory/memory.pkl'
-    save_path = 'C:/Users/ryano/repos/deep-rl-trex/model/model-weights-noisy'
+    save_path = 'C:/Users/ryano/repos/deep-rl-trex/model/model'
 
     mem_length = 150000
 
@@ -21,18 +21,18 @@ if __name__ == '__main__':
                   loss='mse',
                   memory_length=mem_length,
                   dueling=True,
-                  noisy_net=True,
-                  egreedy=True,
+                  noisy_net=False,
+                  egreedy=False,
                   save_memory=memory_fp,
                   save_weights=save_path,
                   verbose_action=True)
 
-    # agent.load_weights(save_path)
-    # agent.load_memory(memory_fp)
-    agent.set_beta_schedule(beta_start=0.4, beta_max=1, annealed_samplings=30000)
-    # agent.set_epsilon_decay_schedule(epsilon=0.0000001, epsilon_min=0.0000001, annealed_steps=50000)
+    agent.load_weights(save_path)
+    agent.load_memory(memory_fp)
+    agent.set_beta_schedule(beta_start=.99999, beta_max=1, annealed_samplings=30000)
+    agent.set_epsilon_decay_schedule(epsilon=0.001, epsilon_min=0.0001, annealed_steps=10000)
 
-    agent.pretraining_steps = 5000
+    agent.pretraining_steps = 0
     print(f'pretraining for {agent.pretraining_steps} steps...')
 
     env.init_game()

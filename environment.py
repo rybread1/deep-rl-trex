@@ -22,6 +22,7 @@ class Environment:
         self.sct = mss()
         self.bbox = {'top': 350, 'left': 50, 'width': 630, 'height': 80}
         self.terminal_bbox = {'top': 360, 'left': 357, 'width': 5, 'height': 5}
+        self.game_won_array = np.load('game_won.npy')
 
         self.state = None
         self.frame_history = deque(maxlen=4)
@@ -30,6 +31,7 @@ class Environment:
         self.window_element = None
         self.action_space = None
         self.actions = None
+        self.game_won = False
 
         self.space_sleep = space_sleep
         self.no_action_sleep = no_action_sleep
@@ -64,6 +66,7 @@ class Environment:
         return next_state, reward, terminal
 
     def reset(self):
+        self.game_won = False
         time.sleep(1)
         self.action_space.space.act()
         self.reset_frame_history()
@@ -84,7 +87,9 @@ class Environment:
         (width, height) = (img.width // 4, img.height // 4)
         img = img.resize((width, height))
         img_np = np.array(img) / 255.0
-        return np.expand_dims(img_np, axis=0)
+        screen_shot = np.expand_dims(img_np, axis=0)
+        self.game_won = (screen_shot == self.game_won_array).all()
+        return screen_shot
 
     def _is_terminal(self):
         sct_img = self.sct.grab(self.terminal_bbox)
@@ -120,14 +125,19 @@ class Environment:
             q_values.append(q_value)
             self.state = next_state
 
+            if self.game_won:
+                terminal = True
+
+                name = self.driver.find_element_by_name('uname')
+                name.send_keys("deeptrex")
+                time.sleep(4)
+                self.driver.find_element_by_xpath('/html/body/div[6]/div/div[1]/div/form/input[5]').click()
+
             if terminal:
 
                 agent.batch_store(batch_loader)
                 if (agent.memory.length > agent.pretraining_steps) or (agent.memory.memory_size == agent.memory.length):
                     agent.replay(batch_size, epoch_steps=step)
-
-                if (epoch % 40 == 0) and (epoch != 0):
-                    agent.save_memory(agent.save_memory_fp)
 
                 log_data = {
                     'epoch': epoch,
@@ -135,9 +145,12 @@ class Environment:
                     'epoch_tot_rewards': sum([x[2] for x in batch_loader]),
                     'epoch_time': datetime.datetime.now() - epoch_start_time,
                     'epoch_avg_q': np.mean(q_values),
+                    'game_won': self.game_won
                 }
-
                 logger.log(agent, log_data, verbose=True)
+
+                if (epoch % 40 == 0) and (epoch != 0):
+                    agent.save_memory(agent.save_memory_fp)
 
                 break
 
